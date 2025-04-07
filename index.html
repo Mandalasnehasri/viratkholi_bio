@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Virat Kohli Blog</title>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault(); // prevent default form submission
+      // You can add form validation or storage logic here if needed
+
+      alert("Registration successful!");
+      window.location.href = "login.html"; // redirect to login page
+    }
+  </script>
+</head>
+<body>
+  <h1>Register</h1>
+  <form onsubmit="handleSubmit(event)">
+    <label>Name: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Password: <input type="password" name="password" required></label><br>
+    <label>Confirm Password: <input type="password" name="confirmpassword" required></label><br>
+    <label>Mobile No: <input type="tel" name="mobile" required></label><br>
+    <label>Date of Birth: <input type="date" name="dob" required></label><br>
+    <label>Address: <textarea name="address" required></textarea></label><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

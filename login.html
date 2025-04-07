@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Virat Kohli Blog</title>
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      // You can add actual credential check here if needed
+      alert("Login successful!");
+      window.location.href = "blog.html"; // redirect to blog
+    }
+  </script>
+</head>
+<body>
+  <h1>Login</h1>
+  <form onsubmit="handleLogin(event)">
+    <label>Username: <input type="text" name="username" required></label><br>
+    <label>Password: <input type="password" name="password" required></label><br>
+    <a href="forgot_password.html">Forgot Password?</a><br><br>
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
