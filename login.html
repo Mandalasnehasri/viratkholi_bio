@@ -1,24 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Login - Virat Kohli Blog</title>
-  <script>
-    function handleLogin(event) {
-      event.preventDefault();
-      // You can add actual credential check here if needed
-      alert("Login successful!");
-      window.location.href = "blog.html"; // redirect to blog
-    }
-  </script>
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 10%;
+            background-image: url("https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .navbar {
+            background-color: bisque;
+            text-align: center;
+            padding: 10px;
+        }
+        .navbar a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: green;
+            margin: 0% 2%;
+            font-family: sans-serif;
+           
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: auto;
+            backdrop-filter: blur(10px);
+            width: 35%;
+            padding: 10px 20px 20px 20px;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .login-container * {
+            margin: 10px;
+        }
+        .form-field input {
+            width: 95%;
+            padding: 10px;
+            margin: 5px;
+            background-color:white;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-bottom: 2px ;
+        }
+    </style>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // prevent default form submission
+            // Simple validation can be added here
+
+            alert("Login successful!");
+            window.location.href = "blog.html"; // Redirect to blog page
+        }
+    </script>
 </head>
 <body>
-  <h1>Login</h1>
-  <form onsubmit="handleLogin(event)">
-    <label>Username: <input type="text" name="username" required></label><br>
-    <label>Password: <input type="password" name="password" required></label><br>
-    <a href="forgot_password.html">Forgot Password?</a><br><br>
-    <button type="submit">Login</button>
-  </form>
+    <form class="login-container" onsubmit="handleLogin(event)">
+        <h1>Login form</h1>
+        <div class="form-field">
+            <input 
+                type="email"
+                name="username"
+                placeholder="Enter your email" required />
+        </div>
+        <div class="form-field">
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter your password" required />
+        </div>
+        <div class="form-checkbox">
+            <input type="checkbox" id="remember"/>
+            <label for="remember">Remember me</label>
+            <a href="#">Forgot password?</a>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+        <div>
+            <span>Don't have an account?</span>
+        </div>
+    </form>
 </body>
 </html>
